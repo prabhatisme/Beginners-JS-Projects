@@ -1,6 +1,27 @@
-// set inital value to zero
+let reset = document.getElementById("reset");
+let increase = document.getElementById("increase");
+let decrease = document.getElementById("decrease");
+let value = document.getElementById("value")
+
+increase.addEventListener('click', function(){
+    value.textContent++;
+    value.style.color = "green"
+})
+
+reset.addEventListener('click', function(){
+    value.textContent = 0;
+    value.style.color = "black"
+})
+
+decrease.addEventListener('click', function(){
+    value.textContent--;
+    value.style.color = "red"
+})
+
+/*
+ 
+// another method 
 let count = 0;
-// select value and buttons
 const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".btn");
 
@@ -27,3 +48,5 @@ btns.forEach(function (btn) {
     value.textContent = count;
   });
 });
+
+ */
